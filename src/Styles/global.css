@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+    background-color: #D7E0EF;
+}
+
+.fundoescuro{
+    background-color: #2B2D42;
+}
