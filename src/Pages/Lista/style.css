@@ -1,29 +1,96 @@
+.header {
+    background-color: #D80032;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    align-self: center;
+    margin-right: 10px;
+}
+
+.logo img {
+    width: 30px;
+    height: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.buttons .button {
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.buttons .button:last-child {
+    margin-right: 0;
+}
+
+.buttons button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.buttons .button {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.buttons .button:hover {
+    color: #ccc;
+    animation: animate 0.5s ease-in-out;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 68px;
-    padding: 65px;
-    justify-content: center;
+    gap: 20px;
+    top:0;
+    padding-top: 180px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    width: 409px;
-    height: 441px;
+    width: 400px;
+    height: 440px;
     background-image: url('../../assets/pizza4queijos.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     font-family: var(--fonte-poppins);
     color: var(--cor-branco);
-    gap: 360px;
-    transition: transform 0.3s ease-in-out;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-}
-
-.card:hover {
-    transform: scale(1.05);
 }
 
 .card_titulo {
@@ -41,12 +108,8 @@
     font-size: 22px;
     border: none;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
 }
 
-.card_rodape button:hover {
-    transform: scale(1.1);
-}
 
 .card_rodape {
     display: flex;

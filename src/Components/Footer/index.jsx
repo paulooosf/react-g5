@@ -1,13 +1,13 @@
 import React from 'react'
 import '../Footer/style.css'
-import fb from '../assets/facebook.png'
-import twitter from '../assets/twitter.png'
-import LinkedIn from '../assets/linkedin.png'
-import inst from '../assets/instagram.png'
+import fb from '../../assets/facebook.png'
+import twitter from '../../assets/twitter.png'
+import LinkedIn from '../../assets/linkedin.png'
+import inst from '../../assets/instagram.png'
 
 function Footer() {
   return (
-    <div className='footer'>
+    <footer className='footer'>
         <div className="sb-footer-section-padding">
             <div className="sb-footer-links">
                 <div className="sb-footer-links-div">
@@ -64,7 +64,7 @@ function Footer() {
                     </div>
                 </div>
         </div>
-    </div>
+    </footer>
   )
 }
 

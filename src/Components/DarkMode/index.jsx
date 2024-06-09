@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../../Header/index.jsx";
+import Header from "../Header/index.jsx";
 import "./style.css";
 import vector from "../../assets/Vector.png";
 import { useState, useEffect } from "react";
@@ -22,7 +22,7 @@ function DarkMode() {
         <div style={{ backgroundColor: cor }}>
             <Header />
             <main>
-                <div className="container">
+                <div className="DarkMode">
                     <div className="buttons">
                         <button className='botao' onClick={click}>
                             <img src={vector} alt="Modo escuro" />
