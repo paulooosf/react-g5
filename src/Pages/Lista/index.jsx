@@ -6,7 +6,9 @@ function Lista() {
         <div>
         <Header />
         <main>
-            <h1>Lista</h1>
+            <div className="container">
+                
+            </div>
         </main>
         </div>
     );

@@ -6,7 +6,9 @@ function Inserir() {
         <div>
             <Header />
         <main>
-            <h1>Inserir</h1>
+            <div className="container">
+                
+            </div>
             </main>
         </div>
     );

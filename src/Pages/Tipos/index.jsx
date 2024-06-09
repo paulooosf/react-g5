@@ -6,7 +6,9 @@ function Tipos(){
         <div>
             <Header />
         <main>
-            <h1>Tipos</h1>
+            <div className="container">
+                
+            </div>
         </main>
             </div>
     );

@@ -5,15 +5,15 @@ import vector from "../assets/Vector.png";
 import "./style.css";
 
 export default function Header() {
-const [darkMode, setDarkMode] = useState(false);
+ const [darkMode, setDarkMode] = useState(false);
 
-const toggleDarkMode = () => {
+ const logoStyle = darkMode ? "logo-dark" : "logo-light";
+ const buttonStyle = darkMode ? "button-dark" : "button-light";
+ const mainStyle = darkMode ? "main-dark" : "main-light";
+
+  const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-};
-
-const logoStyle = darkMode ? "logo-dark" : "logo-light";
-const buttonStyle = darkMode ? "button-dark" : "button-light";
-const mainStyle = darkMode ? "main-dark" : "main-light";
+  };
 
   return (
     <div className={mainStyle}>
@@ -42,6 +42,7 @@ const mainStyle = darkMode ? "main-dark" : "main-light";
     </div>
 );
 }
+
 
 
 

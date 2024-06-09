@@ -7,10 +7,13 @@ return (
     <div>
     <Header />
     <main>
-    <h1>Início</h1>
+    <div className="container">
+    
+    </div>
     </main>
     </div>
 );
 }
+
 
 export default Inicio;
