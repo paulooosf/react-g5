@@ -9,6 +9,7 @@
     height: 90px;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -56,39 +57,9 @@
     margin-left: 5px;
 }
 
-.main-dark {
-    --background-color: #111;
-    --text-color: #ccc;
-}
-
-.main-light {
-    --background-color: #fff;
-    --text-color: #111;
-}
-
-.logo-dark {
-    --logo-color: #fff;
-}
-
-.logo-light {
-    --logo-color: #111;
-}
-
-.button-dark {
-    --button-color: #fff;
-}
-
-.button-light {
-    --button-color: #111;
-}
-
 .logo {
     display: flex;
     align-items: center;
-}
-
-.logo img {
-    filter: invert(var(--logo-color));
 }
 
 .buttons .button {
@@ -98,10 +69,19 @@
     font-weight: bold;
 }
 
-.buttons button img {
-    filter: invert(var(--button-color));
-}
-
 .buttons .button:hover {
     color: #ccc;
+    animation: animate 0.5s ease-in-out;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
