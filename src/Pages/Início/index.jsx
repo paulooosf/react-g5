@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../Header/index.jsx";
 import "./style.css";
 import DarkMode from "../../Components/DarkMode/index.jsx";
-
+import Footer from "../../Footer/index.jsx";
 
 function Inicio() {
     return (
@@ -13,6 +13,7 @@ function Inicio() {
                         <DarkMode/>
                     </div>
             </main>
+            <Footer />
         </div>
     );
 }
