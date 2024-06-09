@@ -4,7 +4,7 @@ import "./style.css";
 import vector from "../../assets/Vector.png";
 import { useState, useEffect } from "react";
 
-const colors = ["transparent", "#2B2D42"];
+const colors = ["rgba(234, 226, 183, 1)", "rgba(52, 50, 40, 1)"];
 
 function DarkMode() {
     const [position, setPosition] = useState(0)
