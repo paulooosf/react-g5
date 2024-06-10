@@ -47,7 +47,7 @@ function Inserir() {
                                 {errors.nome && <p className="error-message">Nome é obrigatório</p>}
 
                                 <label htmlFor="imagem">Link da imagem</label>
-                                <input type="text" id="imagem" {...register("imagem", { required: true })}
+                                <input type="text" id="imagem" {...register("urlImagem", { required: true })}
                                 placeholder="Digite o link da imagem" />
                                 {errors.imagem && <p className="error-message">Link da imagem é obrigatoria</p>}
 
