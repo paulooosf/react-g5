@@ -86,7 +86,6 @@
     flex-direction: column;
     width: 400px;
     height: 440px;
-    background-image: url('../../assets/pizza4queijos.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -94,7 +93,7 @@
     color: var(--cor-branco);
     gap: 320px;
     transition: transform 0.3s ease-in-out;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .card:hover {
@@ -106,15 +105,14 @@
     font-weight: 600;
     padding: 10px 0 0 10px;
     box-sizing: border-box;
+    text-shadow: 3px 3px 15px #000000;
 }
 
 .card_rodape button{
-    text-decoration: underline;
-    font-family: var(--fonte-poppins);
     background: none;
-    color: var(--cor-branco);
-    font-size: 22px;
+    color: black;
     border: none;
+    outline: none;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
@@ -127,8 +125,24 @@
 .card_rodape {
     display: flex;
     flex-direction: row;
-    gap: 185px;
+    gap: 175px;
     padding: 0 15px;
+    text-decoration: none;
+    font-family: var(--fonte-poppins);
+    color: var(--cor-branco);
+}
+
+.card_rodape a {
+    color: var(--cor-branco);
+    font-family: var(--fonte-poppins);
+    font-size: 22px;
+    text-decoration: underline;
+    text-shadow: 3px 3px 15px #000000;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card_rodape a:hover {
+    transform: scale(1.1);
 }
 
 .card_rodape_editar {
