@@ -51,6 +51,16 @@ function Inserir() {
                                 placeholder="Digite o link da imagem" />
                                 {errors.imagem && <p className="error-message">Link da imagem é obrigatoria</p>}
 
+                                <label htmlFor="tipo">Tipo</label>
+                                <input type="text" id="tipo" {...register("tipo", { required: true })}
+                                placeholder="Digite o tipo da receita" />
+                                {errors.tipo && <p className="error-message">O tipo é obrigatório</p>}
+
+                                <label htmlFor="imagem">Link da imagem</label>
+                                <input type="text" id="imagem" {...register("urlImagem", { required: true })}
+                                placeholder="Digite o link da imagem" />
+                                {errors.imagem && <p className="error-message">Link da imagem é obrigatoria</p>}
+
                                 <label htmlFor="ingredientes">Ingredientes</label>
                                 <textarea
                                     id="ingredientes"
