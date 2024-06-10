@@ -1,33 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Logo.png";
-// import vector from "../assets/Vector.png";
 import "./style.css";
 
 export default function Header() {
+  const [darkMode, setDarkMode] = useState(false);
 
+  useEffect (() => {
+    document.body.style.backgroundColor = '#EAE2B7';
+  }, []);
+
+  const toggleBackgroundColor = () => {
+    setDarkMode(!darkMode);
+    document.body.style.backgroundColor = darkMode ? '#EAE2B7' : '#343228';
+  }
 
   return (
     <div className="mainStyle">
-      <div className="header">
+      <header className="header">
         <div className="logoStyle">
-          <img src={logo} alt="Logo do site" />
+          <img src={logo} alt="Logotipo do site"/>
         </div>
         <div className="buttons">
           <Link to="/" className="button">
             Início
-        </Link>
-        <Link to="/lista" className="button">
+          </Link>
+          <Link to="/lista" className="button">
             Lista
-        </Link>
-        <Link to="/tipos" className="button">
+          </Link>
+          <Link to="/tipos" className="button">
             Tipos
-        </Link>
-        <Link to="/inserir" className="button">
+          </Link>
+          <Link to="/inserir" className="button">
             Inserir
-        </Link>
+          </Link>
+          <button className="darkMode" onClick={toggleBackgroundColor}><img src="src\assets\Vector.png" alt="Botão do modo noturno"/></button>
         </div>
-    </div>
+      </header>
     </div>
 );
 }
