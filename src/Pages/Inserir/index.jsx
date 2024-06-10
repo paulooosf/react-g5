@@ -1,49 +1,87 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import Header from "../../Components/Header/index.jsx";
 import "./style.css";
 import Footer from "../../Components/Footer/index.jsx";
 import DarkMode from "../../Components/DarkMode/index.jsx";
-import { useState, useEffect } from "react";
 
 
 const colors = ["rgba(234, 226, 183, 1)", "rgba(52, 50, 40, 1)"];
 
 function Inserir() {
-    const [position, setPosition] = useState(0)
-    const [cor, setCor] = useState(colors[position])
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const [position, setPosition] = React.useState(0)
+    const [cor, setCor] = React.useState(colors[position])
 
     const click = () => {
         setPosition(position === colors.length - 1 ? 0 : position + 1);
     }
 
-    useEffect(() => {
+    React.useEffect(() => {
         setCor(colors[position]);
     }, [position]);
+
+    const addPost = (data) => {
+        console.log(data);
+    }
 
     return (
         <div style={{ backgroundColor: cor }}>
             <main>
+            <Header />
                 <div className="container">
                 <div className="mainStyle"> 
-                <Header/>
                 </div>
                 <button className = 'DarkMode' onClick={click}>
                         <DarkMode/>
                     </button> 
                     <div className="cards">
-                        <div className="card">
-                            <header className="card_titulo">
-                                <h3>Pizza de 4 queijos</h3>
-                            </header>
-                            <footer className="card_rodape">
-                                <div className="card_rodape_editar">
-                                    <button className="editar"><img src="src\assets\editar.png" alt=""/></button>
-                                    <button className="deletar"><img src="src\assets\deletar.png" alt=""/></button>
+                    <div className="card-post">
+                        <h1>Cadastro de receitas</h1>
+                        <hr />
+                        <form onSubmit={handleSubmit(addPost)} className="form-container">
+                            <div className="fields">
+                                <label htmlFor="nome">Nome</label>
+                                <input type="text" id="nome" {...register("nome", { required: true })}
+                                placeholder="Digite o nome" />
+                                {errors.nome && <p className="error-message">Nome é obrigatório</p>}
+
+                                <label htmlFor="imagem">Link da imagem</label>
+                                <input type="text" id="imagem" {...register("imagem", { required: true })}
+                                placeholder="Digite o link da imagem" />
+                                {errors.imagem && <p className="error-message">Link da imagem é obrigatoria</p>}
+
+                                <label htmlFor="ingredientes">Ingredientes</label>
+                                <textarea
+                                    id="ingredientes"
+                                    rows="10"
+                                    cols="30"
+                                    type="text"
+                                    {...register("ingredientes", { required: true })}
+                                    placeholder="Digite os ingredientes"
+                                />
+                                {errors.ingredientes && <p className="error-message">Os ingredientes são obrigatórios</p>}
+                                <h5>Obs: Separe os ingredientes por vírgula!</h5>
+
+                                <label htmlFor="preparo">Modo de Preparo</label>
+                                <textarea
+                                    id="preparo"
+                                    rows="10"
+                                    cols="30"
+                                    type="text"
+                                    {...register("preparo", { required: true })}
+                                    placeholder="Digite o modo de preparo"
+                                />
+                                {errors.preparo && <p className="error-message">Modo de preparo é obrigatório</p>}
+
+                                <div className="btn-post">
+                                    <button type="reset" onClick={() => window.location.href = '/Lista'}>Cancelar</button>
+                                    <button type="submit">Enviar</button>
                                 </div>
-                                <button className="ver_receita">Ver receita</button>
-                            </footer>
-                        </div>
-                </div>  
+                            </div>
+                        </form>
+                    </div>
+                    </div>
             </div>
             </main>
             <Footer />
@@ -52,3 +90,4 @@ function Inserir() {
 }
 
 export default Inserir;
+
