@@ -4,6 +4,11 @@ import "./style.css";
 import Footer from "../../Components/Footer/index.jsx";
 import DarkMode from "../../Components/DarkMode/index.jsx";
 import { useState, useEffect } from "react";
+import Filipe from "../../assets/Filipe.jpeg";
+import Nicolas from "../../assets/Nicolas.jpeg";
+import Thiago from "../../assets/Thiago.jpeg";
+import Paulo from "../../assets/Paulo.jpeg";
+import Matheus from "../../assets/Matheus.jpeg";
 
 
 const colors = ["rgba(234, 226, 183, 1)", "rgba(52, 50, 40, 1)"];
@@ -20,6 +25,20 @@ function Inicio() {
         setCor(colors[position]);
     }, [position]);
 
+    useEffect(() => {
+        const cards = document.querySelectorAll('.circle-card');
+
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('is-flipped');
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('is-flipped');
+            });
+        });
+    }, []);
+
     return (
         <div style={{ backgroundColor: cor }}>
             <main>
@@ -30,20 +49,66 @@ function Inicio() {
                 <button className = 'DarkMode' onClick={click}>
                         <DarkMode/>
                     </button> 
-                    <div className="cards">
-                        <div className="card">
-                            <header className="card_titulo">
-                                <h3>Pizza de 4 queijos</h3>
-                            </header>
-                            <footer className="card_rodape">
-                                <div className="card_rodape_editar">
-                                    <button className="editar"><img src="src\assets\editar.png" alt=""/></button>
-                                    <button className="deletar"><img src="src\assets\deletar.png" alt=""/></button>
-                                </div>
-                                <button className="ver_receita">Ver receita</button>
-                            </footer>
-                        </div>
-                </div>  
+                    <div className="conjunto">   
+                    <div className="Frase2">
+                    <h2>Projetado por Esfomeados, para esfomeados</h2>
+                    </div>
+                        <div className="Frase1">
+                            <h1>GRUPO 5</h1>
+                            </div>                         
+        <div className="circle-container1">
+            <div className="circle-card">
+                <div className="front">
+                    <img src={Matheus} alt="Imagem 1"/>
+                </div>
+                <div className="back">
+                    <p>Olá! Eu sou o Matheus.</p>
+                </div>
+            </div>
+            <div className="circle-card">
+                <div className="front">
+                    <img src={Paulo} alt="Imagem 2"/>
+                </div>
+                <div className="back">
+                    <p>Olá me chamo Paulo.</p>
+                </div>
+            </div>
+            <div className="circle-card">
+                <div className="front">
+                    <img src={Nicolas} alt="Imagem 3"/>
+                </div>
+                <div className="back">
+                    <p>Olá, me chamo Nicolas, sou estudante de programação residente em T.I.C software na Serratec, tenho 17 anos, estou em busca de aperfeiçoamento de técnicas, e tenho vontade de prosseguir na área de frontend.</p>
+                </div>
+            </div>
+        </div>
+        <div className="circle-container2">
+            <div className="circle-card">
+                <div className="front">
+                    <img src={Thiago} alt="Imagem 1"/>
+                </div>
+                <div className="back">
+                    <p>Olá, me chamo Thiago.</p>
+                </div>
+            </div>
+            <div className="circle-card">
+                <div className="front">
+                    <img src={Filipe} alt="Imagem 2"/>
+                </div>
+                <div className="back">
+                    <p>Olá! Me chamo Filipe Lomba.</p>
+                </div>
+            </div>
+            <div className="circle-card">
+                <div className="front">
+                    <img src={Matheus} alt="Imagem 3"/>
+                </div>
+                <div className="back">
+                    <p>Olá! me chamo Higor.</p>
+                </div>
+            </div>
+            </div>
+            </div>
                 <Footer />
                 </div>
             </main>
@@ -51,4 +116,6 @@ function Inicio() {
     );
 }
 
+
 export default Inicio;
+
