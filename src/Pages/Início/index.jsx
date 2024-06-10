@@ -9,6 +9,7 @@ import Nicolas from "../../assets/Nicolas.jpeg";
 import Thiago from "../../assets/Thiago.jpeg";
 import Paulo from "../../assets/Paulo.jpeg";
 import Matheus from "../../assets/Matheus.jpeg";
+import Higor from "../../assets/Higor.jpeg";
 
 
 const colors = ["rgba(234, 226, 183, 1)", "rgba(52, 50, 40, 1)"];
@@ -88,7 +89,7 @@ function Inicio() {
                     <img src={Thiago} alt="Imagem 1"/>
                 </div>
                 <div className="back">
-                    <p>Olá, me chamo Thiago.</p>
+                    <p>Meu nome é Thiago Samuel, trabalho como operador de computador e com montagem e manutenção de pc e notebook, mas no ano de 2023 decidi me aventurar como desenvolvedor de software, e em 2024 consegui uma vaga no curso Serratec. Uma experiência única.</p>
                 </div>
             </div>
             <div className="circle-card">
@@ -96,15 +97,15 @@ function Inicio() {
                     <img src={Filipe} alt="Imagem 2"/>
                 </div>
                 <div className="back">
-                    <p>Olá! Me chamo Filipe Lomba.</p>
+                    <p>Me chamo Filipe, tenho 33 anos e sou residente do Programa de TIC Software do Serratec. Graduado e mestre em História, caí de paraquedas nessa nova área em 2020 e, desde então, me apaixonei.</p>
                 </div>
             </div>
             <div className="circle-card">
                 <div className="front">
-                    <img src={Matheus} alt="Imagem 3"/>
+                    <img src={Higor} alt="Imagem 3"/>
                 </div>
                 <div className="back">
-                    <p>Olá! me chamo Higor.</p>
+                    <p>Olá, meu nome é Higor, tenho 21 anos e sou estudante de tecnologia. Estou sempre em busca de novos conhecimentos e inovações no campo tecnológico, buscando aplicar o que aprendo para resolver problemas práticos.</p>
                 </div>
             </div>
             </div>
