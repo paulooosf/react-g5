@@ -2,9 +2,10 @@ import React from "react";
 import "./style.css";
 import { useState, useEffect } from "react";
 import Header from "../../Components/Header/index.jsx";
-import Footer from "../../Components/Footer/index.jsx";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Footer from "../../Components/Footer/index.jsx";
+import DarkMode from "../../Components/DarkMode/index.jsx";
 
 const colors = ["rgba(234, 226, 183, 1)", "rgba(52, 50, 40, 1)"];
 
@@ -35,7 +36,15 @@ function Lista() {
   return (
     <div style={{ backgroundColor: cor }}>
       <main>
-        <Header />
+        <div className="container">
+        <div className="mainStyle"> 
+                <Header/>
+                </div>
+                <div className="DarkMode">
+                    <button onClick={click}>
+                        <DarkMode/>
+                    </button>
+                </div>
         <div className="cards">
           {receitas.map((receitas, key) => {
             return (
@@ -59,6 +68,8 @@ function Lista() {
               </div>
             );
           })}
+          </div>
+          <Footer />
         </div>
       </main>
     </div>

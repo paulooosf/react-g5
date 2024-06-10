@@ -4,6 +4,8 @@ import Footer from "../../Components/Footer/index.jsx";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import DarkMode from "../../Components/DarkMode/index.jsx";
+import Header from "../../Components/Header/index.jsx";
 
 const colors = ["rgba(234, 226, 183, 1)", "rgba(52, 50, 40, 1)"];
 
@@ -34,8 +36,14 @@ function Tipos() {
     <div style={{ backgroundColor: cor }}>
       <main>
         <div className="container">
-          <div className="mainStyle">
-          </div>
+        <div className="mainStyle"> 
+                <Header/>
+                </div>
+                <div className="DarkMode">
+                    <button onClick={click}>
+                        <DarkMode/>
+                    </button>
+                </div>
           <h1 className="titulo">Selecione o tipo de receita:</h1>
           <select class="form-select">
             <option selected>Selecione uma opção</option>

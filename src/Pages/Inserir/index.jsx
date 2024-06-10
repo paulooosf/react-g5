@@ -1,4 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { useForm } from "react-hook-form";
+import Header from "../../Components/Header/index.jsx";
+import "./style.css";
+import Footer from "../../Components/Footer/index.jsx";
+import DarkMode from "../../Components/DarkMode/index.jsx";
+
+const colors = ["rgba(234, 226, 183, 1)", "rgba(52, 50, 40, 1)"];
 
 function Inserir() {
     const { register, handleSubmit, formState: { errors } } = useForm();
