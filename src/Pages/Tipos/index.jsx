@@ -7,6 +7,7 @@ import axios from "axios";
 import DarkMode from "../../Components/DarkMode/index.jsx";
 import Header from "../../Components/Header/index.jsx";
 
+
 const colors = ["rgba(234, 226, 183, 1)", "rgba(52, 50, 40, 1)"];
 
 function Tipos() {
@@ -45,7 +46,7 @@ function Tipos() {
                     </button>
                 </div>
           <h1 className="titulo">Selecione o tipo de receita:</h1>
-          <select class="form-select">
+          <select className="form-select">
             <option selected>Selecione uma opção</option>
             <option value="1">One</option>
             <option value="2">Two</option>
