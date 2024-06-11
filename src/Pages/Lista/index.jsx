@@ -19,6 +19,11 @@ function Lista() {
       .catch(() => console.log("Erro na requisição!"));
   }, []);
 
+  function deleteReceita(id) {
+    axios.delete(`http://localhost:8080/receitas/${id}`)
+    setReceitas(receitas.filter((receitas) => receitas.id != id));
+  }
+
   return (
     <div>
       <main>
@@ -36,15 +41,21 @@ function Lista() {
                     <h3>{receitas.nome}</h3>
                   </header>
                   <footer className="card_rodape">
-                    <div className="card_rodape_editar">
-                      <Link to={`/update/${receitas.id}`}>
-                      <button className="editar">
-                        <img src="src\assets\editar.png" alt="" />
-                      </button>
-                      </Link>
-                      <button className="deletar">
-                        <img src="src\assets\deletar.png" alt="" />
-                      </button>
+                    <div className="card_rodape_botoes">
+                      <div className="editar">
+                        <Link to={`/update/${receitas.id}`}>
+                        <button className="editar">
+                          <img src="src\assets\editar.png" alt="" />
+                        </button>
+                        </Link>
+                      </div>
+                      <div className="deletar">
+                        <Link to={"/lista"}>
+                          <button className="deletar" onClick={() => deleteReceita(receitas.id)}>
+                            <img src="src\assets\deletar.png" alt="" />
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                     <Link to={`/receitas/${receitas.id}`}>
                       <p>Ver receita</p>

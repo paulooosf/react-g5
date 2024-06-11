@@ -58,7 +58,7 @@ function Update() {
       .put(`http://localhost:8080/receitas/${id}`, data)
       .then(() => {
         console.log("Deu tudo certo");
-        navigate("/");
+        navigate(-1);
       })
       .catch(() => console.log("Problemas na requisição"));
   return (

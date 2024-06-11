@@ -35,13 +35,19 @@ return (
         <div className="line" />
         <ul>
           <h3>Ingredientes:</h3>
-          <p>{ler.ingredientes}</p>
+          <div className="ingredientes">
+            <div>
+              {ler.ingredientes && ler.ingredientes.split(',').map((ingrediente, index) => (
+                    <li key={index}>{ingrediente.trim()}</li>
+                  ))}
+            </div>
+          </div>
           <h3>Modo de Preparo:</h3>
           <p>{ler.preparo}</p>
         </ul>
         <div className="btn-post">
         <Link to={`/lista`}>
-          <button type='submit'>Voltar</button>
+          <button type='submit'>VOLTAR</button>
         </Link>
         </div>
       </div>

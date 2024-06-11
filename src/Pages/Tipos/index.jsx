@@ -47,30 +47,40 @@ function Tipos() {
             ))}
           </select>
           <div className="cards">
-            {receitasFiltradas.map((receitas, key) => (
-              <div
-                className="card"
-                key={key}
-                style={{ backgroundImage: `url(${receitas.urlImagem})` }}
-              >
-                <header className="card_titulo">
-                  <h3>{receitas.nome}</h3>
-                </header>
-                <footer className="card_rodape">
-                  <div className="card_rodape_editar">
-                    <button className="editar">
-                      <img src="src/assets/editar.png" alt="" />
-                    </button>
-                    <button className="deletar">
-                      <img src="src/assets/deletar.png" alt="" />
-                    </button>
-                  </div>
-                  <Link to={`/receitas/${receitas.id}`}>
-                    <p>Ver receita</p>
-                  </Link>
-                </footer>
-              </div>
-            ))}
+          {receitas.map((receitas, key) => {
+              return (
+                <div
+                  className="card"
+                  key={key}
+                  style={{ backgroundImage: `url(${receitas.urlImagem})` }}
+                >
+                  <header className="card_titulo">
+                    <h3>{receitas.nome}</h3>
+                  </header>
+                  <footer className="card_rodape">
+                    <div className="card_rodape_botoes">
+                      <div className="editar">
+                        <Link to={`/update/${receitas.id}`}>
+                        <button className="editar">
+                          <img src="src\assets\editar.png" alt="" />
+                        </button>
+                        </Link>
+                      </div>
+                      <div className="deletar">
+                        <Link to={"/lista"}>
+                          <button className="deletar" onClick={() => deleteReceita(receitas.id)}>
+                            <img src="src\assets\deletar.png" alt="" />
+                          </button>
+                        </Link>
+                      </div>
+                    </div>
+                    <Link to={`/receitas/${receitas.id}`}>
+                      <p>Ver receita</p>
+                    </Link>
+                  </footer>
+                </div>
+              );
+            })}
           </div>
           <Footer />
         </div>

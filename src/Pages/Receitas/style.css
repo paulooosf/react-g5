@@ -15,8 +15,25 @@ ul {
 
 p {
     padding-top: 0.5rem;
+    font-family: var(--fonte-poppins);
+}
+
+h2 {
+    font-family: var(--fonte-poppins);
 }
 
 h3 {
     padding-top: 0.5rem;
+    font-family: var(--fonte-poppins);
+}
+
+.ingredientes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    text-align: left;
+    font-family: var(--fonte-poppins);
 }
