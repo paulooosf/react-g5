@@ -32,7 +32,7 @@ function Inicio() {
           <Header />
           <div className="conjunto">
             <div className="Frase2">
-              <h2>Projetado por Esfomeados, para esfomeados</h2>
+              <h2>Projetado por esfomeados, para esfomeados.</h2>
             </div>
             <div className="Frase1">
               <h1>GRUPO 5</h1>

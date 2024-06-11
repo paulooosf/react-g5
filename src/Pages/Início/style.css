@@ -54,23 +54,6 @@
     font-weight: bold;
 }
 
-.buttons .button:hover {
-    color: #ccc;
-    animation: animate 0.5s ease-in-out;
-}
-
-@keyframes animate {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
 .conjunto {
     display: flex;
     flex-direction: column;
@@ -120,6 +103,7 @@ border: 5px solid #D80032;
     perspective: 1000px;
     position: relative;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .front, .back {

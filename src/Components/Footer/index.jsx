@@ -38,7 +38,7 @@ function Footer() {
             <hr></hr>
                 <div className="sb-footer-below">
                     <div className="sb-footer-copyright">
-                        <p>@{new Date().getFullYear()} Tô com fome Todos os direitos reservados</p>
+                        <p>@{new Date().getFullYear()}     Tô com fome     Todos os direitos reservados</p>
                     </div>
                     <div className="sb-footer-below-links">
                         <a href="/term">

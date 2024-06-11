@@ -68,21 +68,10 @@
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: bold;
+    transition: transform 0.2s ease-in-out;
 }
 
 .buttons .button:hover {
     color: #ccc;
-    animation: animate 0.5s ease-in-out;
-}
-
-@keyframes animate {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
+    transform: scale(1.1);
 }
