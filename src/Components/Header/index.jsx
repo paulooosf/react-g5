@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Logo.png";
+import logoDarkMode from "../../assets/Vector.png";
 import "./style.css";
 
 export default function Header() {
@@ -34,7 +35,7 @@ export default function Header() {
           <Link to="/inserir" className="button">
             Inserir
           </Link>
-          <button className="darkMode" onClick={toggleBackgroundColor}><img src="src\assets\Vector.png" alt="Botão do modo noturno"/></button>
+          <button className="darkMode" onClick={toggleBackgroundColor}><img src={logoDarkMode} alt="Botão do modo noturno"/></button>
         </div>
       </header>
     </div>

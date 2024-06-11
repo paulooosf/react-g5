@@ -45,8 +45,6 @@ function Update() {
       .catch(() => console.log("Erro na requisição!"));
   }, []);
 
-
-
   const {
     register,
     handleSubmit,

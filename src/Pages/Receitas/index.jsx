@@ -4,7 +4,6 @@ import axios from 'axios';
 import "./style.css";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from '../../Components/Footer';
-import { Link } from "react-router-dom";
 
 
 function Receitas() {
