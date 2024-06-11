@@ -51,7 +51,12 @@ function Inicio() {
                   <img src={Paulo} alt="Imagem 2" />
                 </div>
                 <div className="back">
-                  <p>Olá me chamo Paulo.</p>
+                  <p>Olá! Meu nome é Paulo Henrique, sou desenvolvedor de
+                    software FullStack com foco no back-end e entusiasta de
+                    tecnologia. Tenho 20 anos e atualmente sou residente em 
+                    TIC/Software do Serratec, além de cursar Análise e 
+                    Desenvolvimento de Sistemas.
+                  </p>
                 </div>
               </div>
               <div className="circle-card">
