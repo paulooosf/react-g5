@@ -43,7 +43,10 @@ function Inicio() {
                   <img src={Matheus} alt="Imagem 1" />
                 </div>
                 <div className="back">
-                  <p>Olá! Eu sou o Matheus.</p>
+                  <p>Prazer, me chamo Matheus tenho 18 anos acabei 
+                    de terminar a escola e decidi me aventurar na
+                     área de programação,estou fazendo o curso 
+                     Residência em TIC/Software do Serratecs</p>
                 </div>
               </div>
               <div className="circle-card">
