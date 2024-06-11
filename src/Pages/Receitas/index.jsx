@@ -11,7 +11,7 @@ function Receitas() {
 
   useEffect(() => {
   axios
-  .get(`https://6662524362966e20ef083a71.mockapi.io/receitas/${id}`)
+  .get(`http://localhost:8080/receitas/${id}`)
   .then((response) => {
     setLer(response.data);
     console.log(ler.nome);
@@ -24,15 +24,15 @@ return (
   <Header />
   <main>
     <div className="cards">
-      <div className="card">
+      <div className="card-post">
         <header>
           <h2>{ler.nome}</h2>
         </header>
         <div className="line" />
-        <p>{ler.ingredientes}</p>
-      </div>
-      <div className="line">
-      <p>{ler.modoDePreparo}</p>
+        <ul>
+          <li>{ler.ingredientes}</li>
+          <li>{ler.preparo}</li>
+        </ul>
       </div>
     </div>
   </main>

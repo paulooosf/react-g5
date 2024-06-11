@@ -37,9 +37,11 @@ function Lista() {
                   </header>
                   <footer className="card_rodape">
                     <div className="card_rodape_editar">
+                      <Link to={`/update/${receitas.id}`}>
                       <button className="editar">
                         <img src="src\assets\editar.png" alt="" />
                       </button>
+                      </Link>
                       <button className="deletar">
                         <img src="src\assets\deletar.png" alt="" />
                       </button>
