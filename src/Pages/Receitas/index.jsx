@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../../Components/Header';
 import axios from 'axios';
 import "./style.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Footer from '../../Components/Footer';
 import { Link } from "react-router-dom";
 
@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 function Receitas() {
   const [ler, setLer] = useState({});
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
   axios
@@ -20,6 +21,10 @@ function Receitas() {
   })
   .catch(() => console.log("Erro na requisição!"));
 }, []);
+
+const voltar = () => {
+  navigate(-1);
+}
 
 return (
 <div>
@@ -46,9 +51,7 @@ return (
           <p>{ler.preparo}</p>
         </ul>
         <div className="btn-post">
-        <Link to={`/lista`}>
-          <button type='submit'>VOLTAR</button>
-        </Link>
+          <button type='submit' onClick={voltar}>VOLTAR</button>
         </div>
       </div>
     </div>
