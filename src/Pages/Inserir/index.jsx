@@ -2,17 +2,32 @@ import React from "react";
 import Header from "../../Components/Header/index.jsx";
 import "./style.css";
 import Footer from "../../Components/Footer/index.jsx";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 function Inserir() {
+    let navigate = useNavigate(); 
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const addPost = (data) => {
-    console.log(data);
-  };
+//   const addPost = (data) => {
+//     console.log(data);
+//   };
+
+const addPost = (data) =>
+    axios
+      .post("http://localhost:8080/receitas", data)
+      .then(() => {
+        console.log("Deu tudo certo");
+        navigate('/Tipos');
+    })
+    .catch(() => console.log("Problemas na requisição"));
+  
 
   return (
     <div>
