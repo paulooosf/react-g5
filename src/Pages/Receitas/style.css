@@ -1,0 +1,22 @@
+.card-post {
+   margin-left: 20rem;  
+}
+
+.imagem {
+    width: 40rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+
+ul {
+    padding-top: 1rem;
+    width: 40rem;
+}
+
+p {
+    padding-top: 0.5rem;
+}
+
+h3 {
+    padding-top: 0.5rem;
+}

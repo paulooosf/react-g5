@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import "./style.css";
 import { yupResolver } from '@hookform/resolvers/yup';
 import Header from '../../Components/Header';
+import Footer from "../../Components/Footer/index.jsx";
 
 
 const validationPost = yup.object().shape({
@@ -14,6 +15,10 @@ const validationPost = yup.object().shape({
     .string()
     .required("Nome Obrigatório")
     .max(40, "precisa ter 40 caracteres no máximo !"),
+    urlImagem: yup
+    .string()
+    .required("Link Obrigatório")
+    .max(800, "precisa ter 800 caracteres no máximo !"),
   ingredientes: yup
     .string()
     .required("Ingredientes Obrigatório")
@@ -69,6 +74,10 @@ function Update() {
               <input type="text" id="nome" {...register("nome")} />
               <p className="error-message">{errors.nome?.message}</p>
 
+              <label htmlFor="urlImagem">Link da imagem</label>
+              <input type="text" id="urlImagem" {...register("urlImagem")} />
+              <p className="error-message">{errors.urlImagem?.message}</p>
+
               <label htmlFor="ingredientes">Ingredientes</label>
               <input type="text" id="ingredientes" {...register("ingredientes")} />
               <p className="error-message">{errors.ingredientes?.message}</p>
@@ -89,6 +98,7 @@ function Update() {
             </div>
           </form>
         </div>
+        <Footer/>
       </main>
     </div>
   );
