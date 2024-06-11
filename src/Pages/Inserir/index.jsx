@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../Components/Header/index.jsx";
 import "./style.css";
 import Footer from "../../Components/Footer/index.jsx";
+import { useForm } from "react-hook-form";
 
 function Inserir() {
   const {
