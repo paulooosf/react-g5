@@ -20,7 +20,6 @@ Turma 18
 <ul>
     <li>Sobre o Projeto</li>
     <li>Tecnologias utilizadas</li>
-    <li>Passo a passo de execução</li>
     <li>Autores do Projeto</li>
 </ul>
 
